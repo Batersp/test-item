@@ -1,0 +1,6 @@
+.container {
+    background-color: #00a991;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+}

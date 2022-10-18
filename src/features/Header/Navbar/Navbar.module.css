@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+}
+
+.item {
+    padding: 20px;
+}
+
+.item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.item a:hover {
+    color: gold;
+}
+
+.active {
+    color: gold !important;
+}
