@@ -13,8 +13,8 @@ export const Navbar = (): ReturnComponentType => {
   return (
     <div className={style.container}>
       <div className={style.item}>
-        <NavLink to={path.ONLINE_CONSULTATION} className={setActive}>
-          КОНСУЛЬТАЦИЯ ОНЛАЙН
+        <NavLink to={path.CONSULTATION} className={setActive}>
+          КОНСУЛЬТАЦИЯ
         </NavLink>
       </div>
       <div className={style.item}>

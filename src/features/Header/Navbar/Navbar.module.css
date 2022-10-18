@@ -21,3 +21,16 @@
 .active {
     color: gold !important;
 }
+
+@media screen and (max-width: 700px) {
+    .item a {
+       font-size: 12px;
+    }
+}
+@media screen and (max-width: 470px) {
+    .item {
+        padding: 5px;
+    }
+}
+
+

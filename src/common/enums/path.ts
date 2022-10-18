@@ -1,7 +1,7 @@
 export enum path {
   LOGIN = '/login',
   PROFILE = '/profile',
-  ONLINE_CONSULTATION = '/online_consultation',
+  CONSULTATION = '/consultation',
   SUBSCRIPTION = '/subscription',
   BLOG = '/blog',
 }
