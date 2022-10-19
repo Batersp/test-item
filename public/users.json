@@ -1,0 +1,20 @@
+[
+  {
+    "name": "David",
+    "password": "12345",
+    "photo": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745",
+    "status": "all good"
+  },
+  {
+    "name": "Mike",
+    "password": "54321",
+    "photo": "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png",
+    "status": "yo yo yo"
+  },
+  {
+    "name": "Bobi",
+    "password": "2614",
+    "photo": "https://manager.almadarisp.com/user/img/user.png",
+    "status": "ARSENAL"
+  }
+]

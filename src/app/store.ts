@@ -2,10 +2,14 @@ import { combineReducers, configureStore, ThunkDispatch } from '@reduxjs/toolkit
 import thunkMiddleware from 'redux-thunk';
 
 import { AppActionsType } from 'common/types/ActionsType';
+import { appReducer } from 'features/Application';
 import { loginReducer } from 'features/Login';
+import { profileReducer } from 'features/Profile';
 
 export const rootReducer = combineReducers({
   login: loginReducer,
+  app: appReducer,
+  profile: profileReducer,
 });
 
 export const store = configureStore({

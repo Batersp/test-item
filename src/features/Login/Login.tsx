@@ -8,9 +8,10 @@ import style from './Login.module.css';
 
 import petsBanner from 'assets/images/animals-pets-banner.jpg';
 import { path } from 'common/enums/path';
+import { useAppDispatch } from 'common/hooks/useAppDispatch';
 import { useAppSelector } from 'common/hooks/useAppSelector';
 import { ReturnComponentType } from 'common/types/ReturnComponentType';
-import { loginSelectors } from 'features/Login/index';
+import { loginAsyncActions, loginSelectors } from 'features/Login/index';
 import { LoginForm } from 'features/Login/LoginForm/LoginForm';
 import { LoginType } from 'features/Login/loginTypes';
 import { validateLogin } from 'features/Login/validateLogin';
@@ -18,10 +19,13 @@ import { validateLogin } from 'features/Login/validateLogin';
 export const Login = (): ReturnComponentType => {
   const isLoggedIn = useAppSelector(loginSelectors.getIsLoggedIn);
 
+  const dispatch = useAppDispatch();
+
   const onSubmitHandler = (
-    values: LoginType,
+    { name, password }: LoginType,
     { resetForm }: FormikHelpers<LoginType>,
   ): void => {
+    dispatch(loginAsyncActions.loginTC({ name, password }));
     resetForm();
   };
 
