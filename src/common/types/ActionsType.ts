@@ -1,4 +1,5 @@
 import { appActions } from 'features/Application';
+import { blogActions } from 'features/Blog';
 import { loginActions } from 'features/Login';
 import { profileActions } from 'features/Profile';
 
@@ -7,4 +8,6 @@ export type AppActionsType =
   | ReturnType<typeof appActions.setAppStatus>
   | ReturnType<typeof appActions.setAppSnackbarValue>
   | ReturnType<typeof appActions.setError>
-  | ReturnType<typeof profileActions.setProfile>;
+  | ReturnType<typeof profileActions.setProfile>
+  | ReturnType<typeof blogActions.addPost>
+  | ReturnType<typeof blogActions.setPosts>;

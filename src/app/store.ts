@@ -3,6 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 
 import { AppActionsType } from 'common/types/ActionsType';
 import { appReducer } from 'features/Application';
+import { blogReducer } from 'features/Blog';
 import { loginReducer } from 'features/Login';
 import { profileReducer } from 'features/Profile';
 
@@ -10,6 +11,7 @@ export const rootReducer = combineReducers({
   login: loginReducer,
   app: appReducer,
   profile: profileReducer,
+  blog: blogReducer,
 });
 
 export const store = configureStore({

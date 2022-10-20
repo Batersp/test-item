@@ -1,0 +1,51 @@
+.sections {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.item::before {
+    display: inline-block;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+.item:hover {
+    cursor: context-menu;
+
+    text-shadow: -2px -2px 2px rgba(49, 37, 107, 0.89);
+}
+
+.category {
+    margin-left: 10px;
+}
+
+.treatment::before {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlU8yqMs-b7qvdu2XyRtDvRr0i9VegZOCgw&usqp=CAU');
+}
+
+.training::before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6381/6381369.png');
+}
+
+.feeding::before {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbS28dl6YR3ybSJaZ3W4xuCmNb2AReSP8Y6A&usqp=CAU');
+}
+
+.care::before {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScVZFXi6jbsy3QMLCULv7nkckIUJt_KvOByg&usqp=CAU');
+}
+
+
+
+
+
