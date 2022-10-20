@@ -15,4 +15,6 @@ export type CommentType = {
   date: string;
 };
 
+export type CategoriesType = { category: CategoryType; logo: string }[];
+
 export type CategoryType = 'Treatment' | 'Training' | 'Feeding' | 'Care' | 'All';

@@ -13,9 +13,10 @@ export const Post: React.FC<PropsType> = ({ post }): ReturnComponentType => {
   const { date, category, title, image } = post;
 
   return (
-    <div className={style.container}>
+    <div className={style.content}>
       <div>
-        <img src={image} alt="Post image" />
+        {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+        <img className={style.image} src={image} alt="Post image" />
       </div>
       <div className={style.info}>
         <div className={style.category}>{category}</div>
