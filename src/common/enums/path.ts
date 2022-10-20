@@ -4,4 +4,5 @@ export enum path {
   CONSULTATION = '/consultation',
   SUBSCRIPTION = '/subscription',
   BLOG = '/blog',
+  OPEN_POST = '/blog/:postId',
 }

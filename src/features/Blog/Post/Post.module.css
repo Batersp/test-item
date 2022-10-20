@@ -5,6 +5,7 @@
     margin-left: 20px;
     margin-top: 10px;
     padding: 30px;
+    cursor: context-menu;
 }
 
 .image {
@@ -31,4 +32,13 @@
     margin-top: 20px;
     font-size: 30px;
     font-weight: bolder;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
