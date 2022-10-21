@@ -3,4 +3,12 @@ export type ProfileType = {
   name: string;
   photo: string;
   status: string;
+  pets: PetType[];
+};
+
+export type PetType = {
+  name: string;
+  pet: string;
+  photo: string;
+  id: string;
 };

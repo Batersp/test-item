@@ -1,0 +1,13 @@
+.container {
+    width: 300px;
+    padding: 30px;
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.photo {
+    width: 100%;
+}

@@ -41,7 +41,9 @@ export const Navbar = (): ReturnComponentType => {
       </div>
       {isLoggedIn ? (
         <div className={style.logout}>
-          <div className={style.name}>{name}</div>
+          <NavLink to={path.PROFILE} className={style.name}>
+            {name}
+          </NavLink>
           <ExitToAppOutlinedIcon
             className={style.icon}
             color="warning"

@@ -29,6 +29,7 @@ const loginTC = createAsyncThunk(
                 name: mockUser.name,
                 status: mockUser.status,
                 photo: mockUser.photo,
+                pets: mockUser.pets,
               },
             }),
           );
