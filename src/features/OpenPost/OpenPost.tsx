@@ -48,7 +48,7 @@ export const OpenPost = (): ReturnComponentType => {
       {comments.map(comment => (
         <Comment key={comment.id} comment={comment} />
       ))}
-      {isLoggedIn && <NewCommentForm />}
+      {isLoggedIn && postId && <NewCommentForm postId={postId} />}
     </div>
   );
 };

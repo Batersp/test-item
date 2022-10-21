@@ -2,15 +2,25 @@ import React, { ChangeEvent, useState } from 'react';
 
 import SendIcon from '@mui/icons-material/Send';
 import { Button, TextField } from '@mui/material';
+import { v1 } from 'uuid';
 
+import { useAppDispatch } from 'common/hooks/useAppDispatch';
 import { useAppSelector } from 'common/hooks/useAppSelector';
 import { ReturnComponentType } from 'common/types/ReturnComponentType';
+import { blogActions } from 'features/Blog';
 import style from 'features/OpenPost/NewCommentForm/NewCommentForm.module.css';
 import { profileSelectors } from 'features/Profile';
 
-export const NewCommentForm = (): ReturnComponentType => {
+type PropsType = {
+  postId: string;
+};
+
+export const NewCommentForm: React.FC<PropsType> = ({ postId }): ReturnComponentType => {
   const [value, setValue] = useState<string>('');
-  const profilePhoto = useAppSelector(profileSelectors.getProfile).photo;
+  const profile = useAppSelector(profileSelectors.getProfile);
+  const dispatch = useAppDispatch();
+  const date = new Date();
+  const stringDate = date?.toLocaleDateString();
 
   const onInputChangeHandler = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -18,19 +28,39 @@ export const NewCommentForm = (): ReturnComponentType => {
     setValue(event.currentTarget.value);
   };
 
+  const addComment = (): void => {
+    const comment = {
+      id: v1(),
+      text: value,
+      author: profile.name,
+      date: stringDate,
+    };
+
+    dispatch(blogActions.addComment({ newComment: { comment, postId } }));
+    setValue('');
+  };
+
   return (
     <div className={style.container}>
-      <img className={style.photo} src={profilePhoto} alt="" />
+      <img className={style.photo} src={profile.photo} alt="" />
       <TextField
         className={style.input}
         value={value}
+        type="text"
         onChange={onInputChangeHandler}
         label="Comment"
         variant="outlined"
       />
-      <Button className={style.btn} variant="contained" endIcon={<SendIcon />}>
-        Send
-      </Button>
+      <div className={style.btn}>
+        <Button
+          disabled={!value.trim()}
+          onClick={addComment}
+          variant="contained"
+          endIcon={<SendIcon />}
+        >
+          Send
+        </Button>
+      </div>
     </div>
   );
 };

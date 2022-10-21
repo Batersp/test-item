@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { blogApi } from 'api/blogApi';
 import { requestStatus } from 'common/enums/requestStatus';
 import { appActions } from 'features/Application';
-import { CategoriesType, PostType } from 'features/Blog/blogTypes';
+import { CategoriesType, CommentType, PostType } from 'features/Blog/blogTypes';
 import { blogActions } from 'features/Blog/index';
 
 const requestTime = 1500;
@@ -55,6 +55,17 @@ export const slice = createSlice({
 
     addPost(state, action: PayloadAction<{ post: PostType }>) {
       state.posts.unshift(action.payload.post);
+    },
+
+    addComment(
+      state,
+      action: PayloadAction<{ newComment: { comment: CommentType; postId: string } }>,
+    ) {
+      const index = state.posts.findIndex(
+        ({ id }) => id === action.payload.newComment.postId,
+      );
+
+      state.posts[index].comments.unshift(action.payload.newComment.comment);
     },
   },
 });
