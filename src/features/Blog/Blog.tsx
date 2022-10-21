@@ -21,7 +21,7 @@ export const Blog = (): ReturnComponentType => {
   return (
     <div className={style.container}>
       <div className={style.content}>
-        <div className={style.title}>Блог</div>
+        <div className={style.title}>Blog</div>
         <Categories filter={filter} setCategory={setFilter} />
         <div className={style.posts}>
           {filteredPosts.map(post => (

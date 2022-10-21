@@ -26,17 +26,17 @@ export const Navbar = (): ReturnComponentType => {
     <div className={style.container}>
       <div className={style.item}>
         <NavLink to={path.CONSULTATION} className={setActive}>
-          КОНСУЛЬТАЦИЯ
+          CONSULTATION
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to={path.SUBSCRIPTION} className={setActive}>
-          ПОДПИСКА
+          SUBSCRIPTION
         </NavLink>
       </div>
       <div className={style.item}>
         <NavLink to={path.BLOG} className={setActive}>
-          БЛОГ
+          BLOG
         </NavLink>
       </div>
       {isLoggedIn ? (
@@ -52,7 +52,7 @@ export const Navbar = (): ReturnComponentType => {
       ) : (
         <div className={style.item}>
           <NavLink to={path.LOGIN} className={setActive}>
-            ВХОД
+            SIGN IN
           </NavLink>
         </div>
       )}

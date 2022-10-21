@@ -1,0 +1,27 @@
+.container {
+    padding-left: 100px;
+}
+
+.content {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+
+}
+
+
+.userLogo {
+    width: 70px;
+}
+
+.info {
+    margin-left: 20px;
+    background-color: rgba(90, 100, 95, 0.89);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.author {
+    font-weight: bold;
+}

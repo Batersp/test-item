@@ -5,10 +5,10 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { path } from 'common/enums/path';
 import { ReturnComponentType } from 'common/types/ReturnComponentType';
 import { Blog } from 'features/Blog/Blog';
-import { OpenPost } from 'features/Blog/OpenPost/OpenPost';
 import { Consultation } from 'features/Consultation/Consultation';
 import { Error404 } from 'features/Error404/Error404';
 import { Login } from 'features/Login/Login';
+import { OpenPost } from 'features/OpenPost/OpenPost';
 import { Profile } from 'features/Profile/Profile';
 import { Subscription } from 'features/Subscription/Subscription';
 
