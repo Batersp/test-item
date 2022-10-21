@@ -6,11 +6,14 @@ import { path } from 'common/enums/path';
 import { useAppSelector } from 'common/hooks/useAppSelector';
 import { ReturnComponentType } from 'common/types/ReturnComponentType';
 import { blogSelectors } from 'features/Blog';
+import { loginSelectors } from 'features/Login';
 import { Comment } from 'features/OpenPost/Comment/Comment';
+import { NewCommentForm } from 'features/OpenPost/NewCommentForm/NewCommentForm';
 import style from 'features/OpenPost/OpenPost.module.css';
 
 export const OpenPost = (): ReturnComponentType => {
   const { postId } = useParams();
+  const isLoggedIn = useAppSelector(loginSelectors.getIsLoggedIn);
 
   const post = useAppSelector(blogSelectors.getPosts).filter(
     ({ id }) => id === postId,
@@ -45,6 +48,7 @@ export const OpenPost = (): ReturnComponentType => {
       {comments.map(comment => (
         <Comment key={comment.id} comment={comment} />
       ))}
+      {isLoggedIn && <NewCommentForm />}
     </div>
   );
 };
