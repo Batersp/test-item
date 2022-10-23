@@ -31,6 +31,10 @@ export const slice = createSlice({
     posts: [] as PostType[],
     categories: [
       {
+        category: 'All',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4cnmIIGCRteSXCJMxG9cEaYks9ttrDzdTA&usqp=CAU',
+      },
+      {
         category: 'Treatment',
         logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPlU8yqMs-b7qvdu2XyRtDvRr0i9VegZOCgw&usqp=CAU',
       },

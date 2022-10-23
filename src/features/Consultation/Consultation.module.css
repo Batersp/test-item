@@ -1,0 +1,35 @@
+.container {
+    height: calc(100vh - 80px) ;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.container::after {
+    content: "";
+    background: url('../../assets/images/consultationImage.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.65;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.textareaContainer {
+    margin-top: 40px;
+    width:30%;
+}

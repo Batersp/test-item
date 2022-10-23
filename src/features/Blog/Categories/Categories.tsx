@@ -23,7 +23,11 @@ export const Categories: React.FC<PropsType> = ({
       {categories.map(({ category, logo }) => (
         /* eslint-disable-next-line jsx-a11y/no-static-element-interactions,jsx-a11y/click-events-have-key-events */
         <div
-          style={filter === category ? { backgroundColor: '#b148e3' } : {}}
+          style={
+            filter === category
+              ? { backgroundColor: '#b148e3', borderBottom: 'solid 10px black' }
+              : {}
+          }
           key={category}
           onClick={() => setCategory(category)}
           className={`${style.item}`}

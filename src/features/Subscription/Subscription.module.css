@@ -1,0 +1,38 @@
+.container {
+    height: calc(100vh - 80px) ;
+    position: relative;
+}
+
+.container::after {
+    content: "";
+    background: url('../../assets/images/subscriptionImages.webp');
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.content {
+    width: 500px;
+    margin-left: 100px;
+}
+
+.title {
+    padding-top: 40px;
+    color: white;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.text {
+    color: white;
+}
+
+.btn {
+    width: 300px;
+    border-radius: 30px;
+}
