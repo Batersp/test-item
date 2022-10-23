@@ -25,6 +25,25 @@
     margin-left: 10px;
 }
 
+@media screen and (max-width: 1070px) {
+   .item {
+       padding: 10px;
+   }
+    .logo {
+        width: 40px;
+
+    }
+}
+
+@media screen and (max-width: 970px) {
+   .sections {
+       flex-wrap: wrap;
+   }
+    .item {
+        padding: 2px;
+    }
+}
+
 
 
 

@@ -5,8 +5,8 @@
 }
 
 .content {
+    min-height: 100%;
     width: calc(100vw - 200px);
-    background-color: gold;
     margin: 0 auto;
 }
 
@@ -21,6 +21,15 @@
 .posts {
     display: flex;
     flex-wrap: wrap;
-
-
 }
+
+@media screen and (max-width: 890px) {
+    .posts {
+        display: block;
+    }
+}
+
+
+
+
+
