@@ -19,7 +19,7 @@ export const OpenPost = (): ReturnComponentType => {
     ({ id }) => id === postId,
   )[0];
 
-  const { title, image, text, category, comments } = post;
+  const { title, image, text, category, comments, id: postIdForComment } = post;
 
   return (
     <div className={style.container}>
@@ -46,7 +46,7 @@ export const OpenPost = (): ReturnComponentType => {
       <div className={style.commentsTitle}>Comments</div>
 
       {comments.map(comment => (
-        <Comment key={comment.id} comment={comment} />
+        <Comment key={comment.id} postId={postIdForComment} comment={comment} />
       ))}
       {isLoggedIn && postId && <NewCommentForm postId={postId} />}
     </div>

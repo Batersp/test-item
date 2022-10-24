@@ -11,4 +11,5 @@ export type AppActionsType =
   | ReturnType<typeof profileActions.setProfile>
   | ReturnType<typeof blogActions.addPost>
   | ReturnType<typeof blogActions.setPosts>
-  | ReturnType<typeof blogActions.addComment>;
+  | ReturnType<typeof blogActions.addComment>
+  | ReturnType<typeof blogActions.deleteComment>;

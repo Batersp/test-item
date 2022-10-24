@@ -8,8 +8,8 @@ import { loginReducer } from 'features/Login';
 import { profileReducer } from 'features/Profile';
 
 export const rootReducer = combineReducers({
-  login: loginReducer,
   app: appReducer,
+  login: loginReducer,
   profile: profileReducer,
   blog: blogReducer,
 });

@@ -71,5 +71,15 @@ export const slice = createSlice({
 
       state.posts[index].comments.unshift(action.payload.newComment.comment);
     },
+
+    deleteComment(state, action: PayloadAction<{ commentId: string; postId: string }>) {
+      const indexPost = state.posts.findIndex(({ id }) => id === action.payload.postId);
+
+      const indexComment = state.posts[indexPost].comments.findIndex(
+        ({ id }) => id === action.payload.commentId,
+      );
+
+      state.posts[indexPost].comments.splice(indexComment, 1);
+    },
   },
 });
