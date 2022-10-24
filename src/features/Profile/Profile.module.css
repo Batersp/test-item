@@ -1,12 +1,12 @@
 .container {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: start  ;
+    align-items: start;
     background-color: rgba(238, 205, 208, 0.89);
 }
 
 .paper {
-    width: 400px;
+    width: 600px;
     margin-left: 200px;
     margin-top: 50px;
     display: flex;
@@ -46,4 +46,25 @@
     font-weight: bold;
     color: #2c541c;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .paper {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .paper {
+        width: 300px;
+    }
+
+    .pets {
+        align-items: start;
+        margin-left: 10px;
+    }
 }

@@ -76,3 +76,31 @@ li {
     font-size: 30px;
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width: 722px) {
+    .content {
+        width: 400px;
+    }
+    .imgContainer {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .content {
+        width: 300px;
+    }
+    .imgContainer {
+        width: 300px;
+    }
+    .info {
+
+    }
+
+    .li {
+        margin-left: 5px;
+    }
+}
+
+

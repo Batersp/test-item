@@ -25,3 +25,9 @@
 .author {
     font-weight: bold;
 }
+
+@media screen and (max-width: 670px) {
+    .container {
+        padding-left: 20px;
+    }
+}
