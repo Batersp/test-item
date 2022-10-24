@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import style from './Blog.module.css';
 
@@ -9,10 +9,13 @@ import { Categories } from 'features/Blog/Categories/Categories';
 import { blogSelectors } from 'features/Blog/index';
 import { Post } from 'features/Blog/Post/Post';
 
-export const Blog = (): ReturnComponentType => {
+export const Blog = React.memo((): ReturnComponentType => {
   const [filter, setFilter] = useState<CategoryType>('All');
 
   let filteredPosts = useAppSelector(blogSelectors.getPosts);
+  const SetFilterHandler = useCallback((filter: CategoryType): void => {
+    setFilter(filter);
+  }, []);
 
   if (filter !== 'All') {
     filteredPosts = filteredPosts.filter(({ category }) => category === filter);
@@ -22,7 +25,7 @@ export const Blog = (): ReturnComponentType => {
     <div className={style.container}>
       <div className={style.content}>
         <div className={style.title}>Blog</div>
-        <Categories filter={filter} setCategory={setFilter} />
+        <Categories filter={filter} setCategory={SetFilterHandler} />
         <div className={style.posts}>
           {filteredPosts.map(post => (
             <Post key={post.id} post={post} />
@@ -31,4 +34,4 @@ export const Blog = (): ReturnComponentType => {
       </div>
     </div>
   );
-};
+});

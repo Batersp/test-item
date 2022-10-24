@@ -12,10 +12,8 @@ type PropsType = {
   filter: CategoryType;
 };
 
-export const Categories: React.FC<PropsType> = ({
-  setCategory,
-  filter,
-}): ReturnComponentType => {
+export const Categories = React.memo((props: PropsType): ReturnComponentType => {
+  const { filter, setCategory } = props;
   const categories = useAppSelector(blogSelectors.getCategories);
 
   return (
@@ -38,4 +36,4 @@ export const Categories: React.FC<PropsType> = ({
       ))}
     </div>
   );
-};
+});
