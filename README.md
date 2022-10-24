@@ -15,9 +15,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 ### login accounts
-1 - Name = David, Password = 12345
-2 - Name = Mike, Password = 54321
-3 - Name = Bobi, Password = 2614
+1 - Name = David, Password = 12345;
+2 - Name = Mike, Password = 54321;
+3 - Name = Bobi, Password = 2614;
 
 the file with application users is in the users.json file (public/users.json)
 file with blog posts is located (public/articles.json
