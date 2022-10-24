@@ -1,0 +1,50 @@
+[
+  {
+    "name": "David",
+    "password": "12345",
+    "photo": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745",
+    "status": "Everything is fine",
+    "pets": [
+      {
+        "name": "Mailo",
+        "pet": "Dog",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3G8jx69g5NC8yCOTBclps_nkU_GxnykupnQ&usqp=CAU",
+        "id" : "1"
+      },
+      {
+        "name": "Betty",
+        "pet": "Cat",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJixzMGVn_9ZZS4TEFC0VrVawrpVT5cGsZ1w&usqp=CAU",
+        "id" : "2"
+      }
+    ]
+  },
+  {
+    "name": "Mike",
+    "password": "54321",
+    "photo": "https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png",
+    "status": "yo yo yo",
+    "pets": [
+      {
+        "name": "Jack",
+        "pet": "Dog",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqq5jpe2JQ0pOTXPLEgytP9AZZRcMKkR5a0A&usqp=CAU",
+        "id" : "1"
+      }
+    ]
+  },
+  {
+    "name": "Bobi",
+    "password": "2614",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxoVYK9gVqDWkfv3blKuxWEO0t9JrH6XSjxg&usqp=CAU",
+    "status": "ARSENAL",
+    "pets": [
+      {
+        "name": "Bazel",
+        "pet": "Cat",
+        "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsN2v2s5arkTpZ8jTt0dUOX1ACja6pkcJPYA&usqp=CAU",
+        "id" : "1"
+      }
+    ]
+  }
+]
