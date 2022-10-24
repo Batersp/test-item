@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { CircularProgress } from '@mui/material';
 import { NavLink, useParams } from 'react-router-dom';
 
 import { path } from 'common/enums/path';
@@ -18,6 +19,10 @@ export const OpenPost = (): ReturnComponentType => {
   const post = useAppSelector(blogSelectors.getPosts).filter(
     ({ id }) => id === postId,
   )[0];
+
+  if (!post) {
+    return <CircularProgress className={style.CircularProgress} />;
+  }
 
   const { title, image, text, category, comments, id: postIdForComment } = post;
 
