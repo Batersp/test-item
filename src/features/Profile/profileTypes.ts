@@ -1,3 +1,7 @@
+export type InitialStateType = {
+  profile: ProfileType;
+};
+
 export type ProfileType = {
   password?: string;
   name: string;

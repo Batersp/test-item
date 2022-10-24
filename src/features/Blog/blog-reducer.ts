@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { blogApi } from 'api/blogApi';
 import { requestStatus } from 'common/enums/requestStatus';
 import { appActions } from 'features/Application';
-import { CategoriesType, CommentType, PostType } from 'features/Blog/blogTypes';
+import { CommentType, InitialStateType, PostType } from 'features/Blog/blogTypes';
 import { blogActions } from 'features/Blog/index';
 
 const requestTime = 1500;
@@ -28,7 +28,7 @@ export const asyncActions = {
 export const slice = createSlice({
   name: 'blog',
   initialState: {
-    posts: [] as PostType[],
+    posts: [],
     categories: [
       {
         category: 'All',
@@ -50,8 +50,8 @@ export const slice = createSlice({
         category: 'Care',
         logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScVZFXi6jbsy3QMLCULv7nkckIUJt_KvOByg&usqp=CAU',
       },
-    ] as CategoriesType,
-  },
+    ],
+  } as InitialStateType,
   reducers: {
     setPosts(state, action: PayloadAction<{ posts: PostType[] }>) {
       state.posts = action.payload.posts;

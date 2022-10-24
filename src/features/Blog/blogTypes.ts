@@ -1,3 +1,8 @@
+export type InitialStateType = {
+  posts: PostType[];
+  categories: CategoriesType;
+};
+
 export type PostType = {
   id: string;
   title: string;

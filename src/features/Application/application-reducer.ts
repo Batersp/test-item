@@ -2,15 +2,15 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { requestStatus } from 'common/enums/requestStatus';
 import { snackbarType } from 'common/enums/snackbarType';
-import { SnackbarType } from 'features/Application/applicationTypes';
+import { InitialStateType } from 'features/Application/applicationTypes';
 
 export const slice = createSlice({
   name: 'app',
   initialState: {
     status: requestStatus.SUCCEEDED,
-    snackbar: {} as SnackbarType,
+    snackbar: {},
     error: '',
-  },
+  } as InitialStateType,
   reducers: {
     setAppStatus(state, action: PayloadAction<{ status: requestStatus }>) {
       state.status = action.payload.status;
