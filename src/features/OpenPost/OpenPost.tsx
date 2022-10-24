@@ -21,7 +21,7 @@ export const OpenPost = (): ReturnComponentType => {
   )[0];
 
   if (!post) {
-    return <CircularProgress className={style.CircularProgress} />;
+    return <CircularProgress className={style.circularProgress} />;
   }
 
   const { title, image, text, category, comments, id: postIdForComment } = post;
