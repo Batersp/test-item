@@ -2,6 +2,7 @@ import React from 'react';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 
+import likeLogo from 'assets/images/like-2.svg';
 import userLogo from 'assets/images/userLogo.png';
 import { useAppDispatch } from 'common/hooks/useAppDispatch';
 import { useAppSelector } from 'common/hooks/useAppSelector';
@@ -21,7 +22,7 @@ export const Comment: React.FC<PropsType> = ({
   comment,
   postId,
 }): ReturnComponentType => {
-  const { text, date, author, id } = comment;
+  const { text, date, author, id, likeCount } = comment;
   const isLoggedIn = useAppSelector(loginSelectors.getIsLoggedIn);
   const userName = useAppSelector(profileSelectors.getProfile).name;
   const dispatch = useAppDispatch();
@@ -37,6 +38,10 @@ export const Comment: React.FC<PropsType> = ({
           <div className={style.author}>{author}</div>
           <div className={style.text}>{text}</div>
           <div className={style.date}>{date}</div>
+          <div className={style.likeContainer}>
+            {likeCount !== '0' && <span>{likeCount}</span>}
+            <img className={style.likeLogo} src={likeLogo} alt="like logo" />
+          </div>
           {isLoggedIn && userName === author && (
             <DeleteIcon
               onClick={deleteComment}

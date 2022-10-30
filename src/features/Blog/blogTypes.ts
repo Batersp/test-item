@@ -18,6 +18,7 @@ export type CommentType = {
   text: string;
   author: string;
   date: string;
+  likeCount: string;
 };
 
 export type CategoriesType = { category: CategoryType; logo: string }[];

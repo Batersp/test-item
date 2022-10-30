@@ -18,13 +18,32 @@
 .info {
     margin-left: 20px;
     background-color: rgba(90, 100, 95, 0.89);
-    padding: 20px;
+    padding: 20px 40px 20px 20px;
     border-radius: 30px;
     position: relative;
 }
 
 .author {
     font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.date {
+    padding-top: 10px;
+    padding-right: 40px;
+}
+
+.likeContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.likeLogo {
+    width: 20px;
+    margin-left: 5px;
 }
 
 .deleteIcon {

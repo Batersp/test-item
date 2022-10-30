@@ -8,6 +8,7 @@ import { useAppDispatch } from 'common/hooks/useAppDispatch';
 import { useAppSelector } from 'common/hooks/useAppSelector';
 import { ReturnComponentType } from 'common/types/ReturnComponentType';
 import { blogActions } from 'features/Blog';
+import { CommentType } from 'features/Blog/blogTypes';
 import style from 'features/OpenPost/NewCommentForm/NewCommentForm.module.css';
 import { profileSelectors } from 'features/Profile';
 
@@ -29,11 +30,12 @@ export const NewCommentForm: React.FC<PropsType> = ({ postId }): ReturnComponent
   };
 
   const addComment = (): void => {
-    const comment = {
+    const comment: CommentType = {
       id: v1(),
       text: value,
       author: profile.name,
       date: stringDate,
+      likeCount: '0',
     };
 
     dispatch(blogActions.addComment({ newComment: { comment, postId } }));
