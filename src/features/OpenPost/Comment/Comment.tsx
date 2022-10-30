@@ -30,6 +30,16 @@ export const Comment: React.FC<PropsType> = ({
     dispatch(blogActions.deleteComment({ commentId: id, postId }));
   };
 
+  const addLike = (): void => {
+    dispatch(
+      blogActions.addLike({
+        postId,
+        commentId: id,
+        likeCount: (parseInt(likeCount, 10) + 1).toString(),
+      }),
+    );
+  };
+
   return (
     <div className={style.container}>
       <div className={style.content}>
@@ -40,7 +50,13 @@ export const Comment: React.FC<PropsType> = ({
           <div className={style.date}>{date}</div>
           <div className={style.likeContainer}>
             {likeCount !== '0' && <span>{likeCount}</span>}
-            <img className={style.likeLogo} src={likeLogo} alt="like logo" />
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+            <img
+              onClick={addLike}
+              className={style.likeLogo}
+              src={likeLogo}
+              alt="like logo"
+            />
           </div>
           {isLoggedIn && userName === author && (
             <DeleteIcon

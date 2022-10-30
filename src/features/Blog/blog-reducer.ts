@@ -81,5 +81,17 @@ export const slice = createSlice({
 
       state.posts[indexPost].comments.splice(indexComment, 1);
     },
+
+    addLike(
+      state,
+      action: PayloadAction<{ postId: string; commentId: string; likeCount: string }>,
+    ) {
+      const indexPost = state.posts.findIndex(({ id }) => id === action.payload.postId);
+      const indexComment = state.posts[indexPost].comments.findIndex(
+        ({ id }) => id === action.payload.commentId,
+      );
+
+      state.posts[indexPost].comments[indexComment].likeCount = action.payload.likeCount;
+    },
   },
 });
